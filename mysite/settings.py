@@ -74,8 +74,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',  # PostgreSQL backend
+        'NAME': 'testing_db',                       # your PostgreSQL database name
+        'USER': 'postgres',                           # your PostgreSQL username
+        'PASSWORD': '123',                   # your PostgreSQL password
+        'HOST': 'localhost',                        # use '127.0.0.1' or 'localhost'
+        'PORT': '5432',                             # default PostgreSQL port
     }
 }
 
@@ -104,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Casablanca'
 
 USE_I18N = True
 
